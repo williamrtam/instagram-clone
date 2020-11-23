@@ -1,0 +1,408 @@
+/* app */
+
+.app {
+  height: 100vh;
+}
+
+:root {
+  font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Navbar */
+
+.navbar {
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+  object-fit: cover;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  display: flex;
+  z-index: 100;
+}
+
+.navbar__instaLogo {
+  height: 30px;
+  margin-left: 50px;
+}
+.navbar__instaLogo:hover {
+  cursor: pointer;
+}
+
+.navbar__headerIcons {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-around;
+  width: 150px;
+  margin-right: 50px;
+}
+
+.navbar__iconButton {
+  width: 30px;
+  height: 30px;
+}
+
+/* Home Page */
+
+.home-page__feed {
+  padding-top: 30px;
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+}
+
+/* Posts list */
+
+.posts-list__progress {
+  display: flex;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Post */
+
+.post {
+  background-color: white;
+  margin-bottom: 60px;
+  max-width: 600px;
+  border: 1px solid lightgray;
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post__imageContainer {
+  background-color: white;
+  box-sizing: border-box;
+  align-items: stretch;
+}
+.post__image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.post__header {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.post__header > * {
+  margin: 10px;
+}
+
+.post__header > h3:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.post__captionContainer {
+  padding-left: 5px;
+}
+.post__userCaption:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Post Likes */
+
+.post-likes__iconButton {
+  width: 15px;
+  height: 15px;
+}
+
+.post-likes__container {
+  padding-left: 15px;
+}
+
+/* Post Liked By */
+
+.post-liked-by {
+  display: flex;
+}
+
+.post-liked-by__avatar > * {
+  padding-top: 15px !important;
+}
+
+.post-liked-by__text {
+  padding-left: 10px;
+}
+
+.post-liked-by__name:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* New Post Modal */
+
+.new-post-modal {
+  display: grid;
+  grid-row-gap: 20px;
+}
+
+/* Post Grid */
+
+.posts-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -1rem -1rem;
+  padding-bottom: 3rem;
+}
+
+.posts-grid__container {
+  max-width: 93.5rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Post Grid Item */
+
+.posts-grid-item {
+  position: relative;
+  flex: 1 0 22rem;
+  margin: 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.posts-grid-item:hover .posts-grid-item__info,
+.posts-grid-item:focus .posts-grid-item__info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.posts-grid-item__info {
+  display: none;
+}
+
+.posts-grid-item__info li {
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.posts-grid-item__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add Commment Box */
+
+.new-comment {
+  display: flex;
+  /* margin-top: 10px; */
+}
+
+.new-comment__input {
+  flex: 1;
+  border: none;
+  border-top: 1px solid lightgray;
+}
+
+.new-comment .new-comment__button {
+  flex: 0;
+  color: blue;
+  background-color: white !important;
+}
+
+/* Comments */
+
+.comment__text {
+  background-color: white;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: normal;
+  padding: 0px 10px;
+  max-height: 100px;
+  overflow: hidden auto;
+}
+
+.comment__username {
+  margin-left: 5px;
+}
+
+.comment__username:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.comment__container {
+  word-wrap: break-word !important;
+  padding: 5px 0px;
+}
+
+/* User Page Header */
+
+.user-page-header {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  margin: 3% 15%;
+}
+
+.user-page-header__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+.user-page-header__info .user-page-header__item {
+  margin: 5px;
+}
+
+.user-page-header > .user-page-header__info {
+  margin-left: 40px;
+}
+
+.user-page-header__item {
+  display: flex;
+}
+
+.user-page-header__item > * {
+  margin: 5px 20px;
+}
+
+.user-page-header__editButton {
+  margin: auto;
+}
+
+.new-post-modal__button {
+  margin-left: auto;
+  margin-right: 0px;
+}
+
+/* User List Modal */
+
+.user-list-modal__username > p:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.user-list-modal {
+  display: flex;
+}
+.user-list-modal__userItem {
+  display: inline-block;
+}
+
+/* View Post Content */
+
+.view-post-modal {
+  display: flex;
+  padding: 0px !important;
+}
+
+.view-post-modal__avatar {
+  border-bottom: 1px solid lightgrey;
+  margin-right: 5 px;
+}
+
+.view-post-modal__likesContainer {
+  padding-left: 10px;
+  border-top: 1px solid lightgrey;
+}
+
+.view-post-modal__comments {
+  margin: 10px;
+  min-height: 50px;
+  display: inline;
+  overflow: hidden auto;
+  flex: 1;
+}
+
+.view-post-modal__newComment {
+  flex: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+.view-post-modal__textContainer {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewpost-modal__imageContainer {
+  box-sizing: border-box;
+  align-items: stretch;
+  min-width: 30%;
+}
+
+/* Login & Register Page */
+
+.login-page {
+  background-color: rgba(var(--b3f, 250, 250, 250), 1);
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.login-page > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-page__credentials {
+  margin: auto;
+  border: 1px solid lightgrey;
+  display: block;
+  max-width: 300px;
+  background-color: white;
+  padding: 25px;
+}
+
+.login-page__logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.login-page__logoContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-page__input {
+  margin-top: 20px;
+}
+
+.login-page__button {
+  margin: 20px 0px;
+}
+
+.login-page__register {
+  margin: 10px auto;
+  background-color: white;
+  max-width: 300px;
+  border: 1px solid lightgray;
+}
+
+.login-page__registerText {
+  text-align: center;
+  padding: 10px 0px;
+}
+
+.login-page__registerLink {
+  color: #0095f6;
+}
+.login-page__registerLink:hover {
+  cursor: pointer;
+}
